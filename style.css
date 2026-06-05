@@ -1,99 +1,138 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  height: 100vh;
-  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ffdde1 0%, #f9c9d4 100%);
+    font-family: 'Segoe UI', 'Poppins', system-ui, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    position: relative;
+    overflow-x: hidden;
+    animation: bgPulse 12s infinite alternate;
+}
+
+@keyframes bgPulse {
+    0% { background: linear-gradient(135deg, #ffdde1, #f9c9d4); }
+    100% { background: linear-gradient(135deg, #ffe6f0, #fbc4d0); }
+}
+
+.float-item {
+    position: fixed;
+    bottom: -20px;
+    pointer-events: none;
+    font-size: 1.6rem;
+    z-index: 0;
+    animation: floatUp linear forwards;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0) rotate(0deg); opacity: 0.8; }
+    100% { transform: translateY(-110vh) rotate(360deg); opacity: 0; }
 }
 
 .card {
-  background: white;
-  padding: 35px;
-  border-radius: 25px;
-  width: 360px;
-  text-align: center;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-  animation: float 3s ease-in-out infinite;
+    background: rgba(255, 250, 245, 0.94);
+    backdrop-filter: blur(14px);
+    border-radius: 58px;
+    padding: 2rem;
+    max-width: 650px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 30px 50px rgba(0,0,0,0.2);
+    z-index: 2;
+    animation: fadeInUp 0.8s ease;
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 h1 {
-  color: #ff4d6d;
-  margin-bottom: 15px;
+    font-size: 2.2rem;
+    background: linear-gradient(120deg, #b13e5c, #e26f8c);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 0.5rem;
 }
 
-p {
-  color: #555;
-  font-size: 15px;
-  line-height: 1.6;
-  margin-bottom: 15px;
-}
-
-h3 {
-  margin: 15px 0;
-  color: #ff4d6d;
-}
-
-.buttons {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
+.question {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color: #5e2a3a;
 }
 
 button {
-  border: none;
-  padding: 10px 22px;
-  border-radius: 30px;
-  font-size: 14px;
-  cursor: pointer;
-  transition: 0.3s;
+    background: #ff8aa4;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 24px;
+    margin: 8px;
+    border-radius: 60px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.yes {
-  background: #ff4d6d;
-  color: white;
+button:hover {
+    background: #e26f8c;
+    transform: scale(1.02);
 }
 
-.yes:hover {
-  transform: scale(1.1);
+.message-box, .jokes-box {
+    margin-top: 1.5rem;
+    background: rgba(255,245,240,0.9);
+    border-radius: 32px;
+    padding: 1.5rem;
+    text-align: left;
+    display: none;
 }
 
-.no {
-  background: #ddd;
+.typing {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    white-space: pre-wrap;
 }
 
-#response {
-  margin-top: 15px;
-  color: #ff4d6d;
-  font-weight: 500;
+.signature {
+    margin-top: 1rem;
+    text-align: right;
+    font-style: italic;
+    color: #a03e56;
 }
 
-.heart {
-  position: absolute;
-  font-size: 20px;
-  color: #ff4d6d;
-  animation: rise 5s linear forwards;
+.joke-text {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    padding: 0.5rem;
+    background: #fff0f0;
+    border-radius: 28px;
+    text-align: center;
 }
 
-@keyframes rise {
-  from {
-    transform: translateY(0) scale(1);
-    opacity: 1;
-  }
-  to {
-    transform: translateY(-600px) scale(1.5);
-    opacity: 0;
-  }
+.music-control {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    opacity: 0.6;
+}
+
+footer {
+    margin-top: 1.5rem;
+    font-size: 0.7rem;
+    opacity: 0.5;
+}
+
+@media (max-width: 550px) {
+    .card { padding: 1.2rem; }
+    .typing { font-size: 1rem; }
+    .joke-text { font-size: 1rem; }
 }
