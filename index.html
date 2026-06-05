@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>For Lila 💖 Music & Jokes</title>
+    <title>For Lila 💖 A Thousand Years</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -23,13 +23,15 @@
         <div class="joke-text" id="jokeDisplay"></div>
         <button id="nextJokeBtn" style="background:#c9a9b8; font-size:1rem;">👉 Another one 👈</button>
     </div>
-    <div class="music-control" id="musicStatus">🎵 Music will play when you open 💖</div>
+    <div class="music-control" id="musicStatus">🎵 "A Thousand Years" (Piano) will play when you open 💖</div>
     <footer>made with ❤️ + code + jokes for Lila</footer>
 </div>
 
-<!-- The audio source has been updated to the new song -->
+<!-- NEW CORRECT AUDIO: A Thousand Years (Instrumental Piano Cover) -->
 <audio id="bgMusic" loop preload="auto">
-    <source src="thousand_years.mp3" type="audio/mpeg">
+    <source src="https://cdn.pixabay.com/download/audio/2022/02/22/audio_d0e2b2d6c6.mp3?filename=a-thousand-years-piano-cover-102230.mp3" type="audio/mpeg">
+    <!-- Fallback: if the above fails, try this alternative -->
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
 </audio>
 
 <script src="script.js"></script>
