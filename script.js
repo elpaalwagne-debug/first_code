@@ -90,7 +90,7 @@ function startMusic() {
             musicStarted = true;
             musicStatus.innerHTML = "🎵 Soft instrumental playing 🎵";
         }).catch(e => {
-            musicStatus.innerHTML = "🎵 Click again if music doesn't start (browser rules) 🎵";
+            musicStatus.innerHTML = "🎵 Click the play button on the page if the music doesn't start automatically 🎵";
         });
     }
 }
