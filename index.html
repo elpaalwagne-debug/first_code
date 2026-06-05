@@ -1,56 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-
-  <head>
-    <meta charset="UTF-8">
-    <title>Untitled</title>
-    <link rel="stylesheet" href="./style.css">
-    
-
-
-  </head>
-    
-  <body>
-  <!DOCTYPE html>
-<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>I’m Sorry Yididiya 💕</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>For Lila 💖 Music & Jokes</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- Background Music -->
-  <audio id="bgMusic" loop>
-    <source src="music.mp3" type="audio/mpeg">
-  </audio>
-
-  <div class="card">
-    <h1>I’m Sorry, <span id="name"></span> 💖</h1>
-
-    <p>
-      I may not have the perfect words,  
-      and I may not be perfect either…  
-      but I truly care and I never meant to hurt you.
-      <br><br>
-      Can we be friends like the past days? 🌸
-    </p>
-
-    <h3>Will you forgive me? 🥺</h3>
-
-    <div class="buttons">
-      <button class="yes" onclick="forgiven()">Yes 💕</button>
-      <button class="no" id="noBtn">No 🙃</button>
+<div class="card" id="card">
+    <h1>✨ For Lila ✨</h1>
+    <div class="question" id="questionText">Lila... I made something just for you 💌</div>
+    <div>
+        <button id="revealBtn">💖 Open for you 💖</button>
+        <button id="resetBtn" style="background:#b28a9c; display:none;">🔄 Start over</button>
     </div>
+    <div class="message-box" id="messageBox">
+        <div class="typing" id="typingMessage"></div>
+        <div class="signature" id="signature"></div>
+    </div>
+    <div class="jokes-box" id="jokesBox">
+        <div style="font-weight: bold; margin-bottom: 10px;">😊 A little smile for Lila:</div>
+        <div class="joke-text" id="jokeDisplay"></div>
+        <button id="nextJokeBtn" style="background:#c9a9b8; font-size:1rem;">👉 Another one 👈</button>
+    </div>
+    <div class="music-control" id="musicStatus">🎵 Music will play when you open 💖</div>
+    <footer>made with ❤️ + code + jokes for Lila</footer>
+</div>
 
-    <p id="response"></p>
-  </div>
+<audio id="bgMusic" loop preload="auto">
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+</audio>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
-</html>
-    <script  src="./script.js"></script>
-
-  </body>
-  
 </html>
