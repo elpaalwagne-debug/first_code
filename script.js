@@ -158,3 +158,11 @@ nextJokeBtn.addEventListener('click', showNextJoke);
 
 // Initial gentle floating
 for (let i=0; i<8; i++) setTimeout(createFloat, i*250);
+const manualPlayBtn = document.getElementById('manualPlayBtn');
+if (manualPlayBtn) {
+    manualPlayBtn.addEventListener('click', () => {
+        audio.play().then(() => {
+            musicStatus.innerHTML = "🎵 A Thousand Years (Piano) is playing 🎵";
+        }).catch(e => console.log("Play error:", e));
+    });
+}
