@@ -1,4 +1,4 @@
-// ---------- LONGER HEARTFELT MESSAGE ----------
+// ---------- HEARTFELT MESSAGE ----------
 const fullMessage = `Lila,
 
 I've been wanting to say this for a while, but words are hard. So I built this little page for you — with music, floating hearts, and some silly jokes. 
@@ -88,9 +88,9 @@ function startMusic() {
     if (!musicStarted) {
         audio.play().then(() => {
             musicStarted = true;
-            musicStatus.innerHTML = "🎵 Soft instrumental playing 🎵";
+            musicStatus.innerHTML = "🎵 A Thousand Years (Piano) is playing 🎵";
         }).catch(e => {
-            musicStatus.innerHTML = "🎵 Click the play button on the page if the music doesn't start automatically 🎵";
+            musicStatus.innerHTML = "🎵 Click the play button if music doesn't start automatically 🎵";
         });
     }
 }
@@ -137,7 +137,7 @@ function resetAll() {
     audio.pause();
     audio.currentTime = 0;
     musicStarted = false;
-    musicStatus.innerHTML = "🎵 Music will play when you open 💖";
+    musicStatus.innerHTML = "🎵 A Thousand Years (Piano) will play when you open 💖";
     
     messageBox.style.display = 'none';
     jokesBox.style.display = 'none';
